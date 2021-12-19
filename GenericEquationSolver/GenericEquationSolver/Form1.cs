@@ -11,18 +11,21 @@ using System.Windows.Forms;
 
 namespace GenericEquationSolver
 {
-    public partial class Form1 : Form
+    public partial class GenericEquationSolver : Form
     {
-        public Form1()
+        public GenericEquationSolver()
         {
             InitializeComponent();
         }
 
         private void buttonSolve_Click(object sender, EventArgs e)
         {
-            Function f = new Function("f", "x^2 + sin(pi/4)", "x");
+            /*Function f = new Function("f", "x^2 + sin(pi/4)", "x");
 
-            MessageBox.Show(f.calculate(3).ToString());
+            MessageBox.Show(f.calculate(3).ToString());*/
+            Function f = new Function("f", textBoxEquation.Text.ToString(), "x");
+
+            textBoxResult.Text = f.calculate(3).ToString();
         }
     }
 }

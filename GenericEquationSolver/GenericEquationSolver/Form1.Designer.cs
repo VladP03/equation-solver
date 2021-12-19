@@ -1,7 +1,7 @@
 ﻿
 namespace GenericEquationSolver
 {
-    partial class Form1
+    partial class GenericEquationSolver
     {
         /// <summary>
         ///  Required designer variable.
@@ -42,15 +42,16 @@ namespace GenericEquationSolver
             this.textBoxResult = new System.Windows.Forms.TextBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.groupBoxEquation = new System.Windows.Forms.GroupBox();
-            this.groupBoxResult = new System.Windows.Forms.GroupBox();
             this.groupBoxParameters = new System.Windows.Forms.GroupBox();
+            this.groupBoxResult = new System.Windows.Forms.GroupBox();
             this.groupBoxEquation.SuspendLayout();
-            this.groupBoxResult.SuspendLayout();
             this.groupBoxParameters.SuspendLayout();
+            this.groupBoxResult.SuspendLayout();
             this.SuspendLayout();
             // 
             // buttonSolve
             // 
+            this.buttonSolve.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(41)))), ((int)(((byte)(54)))));
             this.buttonSolve.Location = new System.Drawing.Point(248, 202);
             this.buttonSolve.Name = "buttonSolve";
             this.buttonSolve.Size = new System.Drawing.Size(132, 23);
@@ -63,35 +64,35 @@ namespace GenericEquationSolver
             // 
             this.textBoxEquation.Location = new System.Drawing.Point(6, 22);
             this.textBoxEquation.Name = "textBoxEquation";
-            this.textBoxEquation.Size = new System.Drawing.Size(287, 23);
+            this.textBoxEquation.Size = new System.Drawing.Size(287, 24);
             this.textBoxEquation.TabIndex = 1;
             // 
             // textBoxPopulationSize
             // 
-            this.textBoxPopulationSize.Location = new System.Drawing.Point(109, 19);
+            this.textBoxPopulationSize.Location = new System.Drawing.Point(147, 15);
             this.textBoxPopulationSize.Name = "textBoxPopulationSize";
-            this.textBoxPopulationSize.Size = new System.Drawing.Size(96, 23);
+            this.textBoxPopulationSize.Size = new System.Drawing.Size(96, 24);
             this.textBoxPopulationSize.TabIndex = 2;
             // 
             // textBoxMaxGenerations
             // 
-            this.textBoxMaxGenerations.Location = new System.Drawing.Point(109, 55);
+            this.textBoxMaxGenerations.Location = new System.Drawing.Point(147, 51);
             this.textBoxMaxGenerations.Name = "textBoxMaxGenerations";
-            this.textBoxMaxGenerations.Size = new System.Drawing.Size(96, 23);
+            this.textBoxMaxGenerations.Size = new System.Drawing.Size(96, 24);
             this.textBoxMaxGenerations.TabIndex = 3;
             // 
             // textBoxCrossoverRate
             // 
-            this.textBoxCrossoverRate.Location = new System.Drawing.Point(109, 96);
+            this.textBoxCrossoverRate.Location = new System.Drawing.Point(147, 92);
             this.textBoxCrossoverRate.Name = "textBoxCrossoverRate";
-            this.textBoxCrossoverRate.Size = new System.Drawing.Size(96, 23);
+            this.textBoxCrossoverRate.Size = new System.Drawing.Size(96, 24);
             this.textBoxCrossoverRate.TabIndex = 4;
             // 
             // textBoxMotivationRate
             // 
-            this.textBoxMotivationRate.Location = new System.Drawing.Point(109, 138);
+            this.textBoxMotivationRate.Location = new System.Drawing.Point(147, 134);
             this.textBoxMotivationRate.Name = "textBoxMotivationRate";
-            this.textBoxMotivationRate.Size = new System.Drawing.Size(96, 23);
+            this.textBoxMotivationRate.Size = new System.Drawing.Size(96, 24);
             this.textBoxMotivationRate.TabIndex = 5;
             // 
             // label2
@@ -99,7 +100,7 @@ namespace GenericEquationSolver
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(6, 22);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(91, 15);
+            this.label2.Size = new System.Drawing.Size(121, 17);
             this.label2.TabIndex = 7;
             this.label2.Text = "Population Size:";
             // 
@@ -108,7 +109,7 @@ namespace GenericEquationSolver
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(6, 58);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(99, 15);
+            this.label3.Size = new System.Drawing.Size(132, 17);
             this.label3.TabIndex = 8;
             this.label3.Text = "Max Generations:";
             // 
@@ -117,7 +118,7 @@ namespace GenericEquationSolver
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(6, 99);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(88, 15);
+            this.label4.Size = new System.Drawing.Size(123, 17);
             this.label4.TabIndex = 9;
             this.label4.Text = "Crossover Rate:";
             // 
@@ -126,7 +127,7 @@ namespace GenericEquationSolver
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(6, 141);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(94, 15);
+            this.label5.Size = new System.Drawing.Size(123, 17);
             this.label5.TabIndex = 10;
             this.label5.Text = "Motivation Rate:";
             // 
@@ -140,26 +141,20 @@ namespace GenericEquationSolver
             // 
             // groupBoxEquation
             // 
+            this.groupBoxEquation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(52)))), ((int)(((byte)(64)))));
             this.groupBoxEquation.Controls.Add(this.textBoxEquation);
+            this.groupBoxEquation.ForeColor = System.Drawing.SystemColors.InactiveCaption;
             this.groupBoxEquation.Location = new System.Drawing.Point(12, 12);
             this.groupBoxEquation.Name = "groupBoxEquation";
+            this.groupBoxEquation.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.groupBoxEquation.Size = new System.Drawing.Size(305, 64);
             this.groupBoxEquation.TabIndex = 13;
             this.groupBoxEquation.TabStop = false;
             this.groupBoxEquation.Text = "Equation";
             // 
-            // groupBoxResult
-            // 
-            this.groupBoxResult.Controls.Add(this.textBoxResult);
-            this.groupBoxResult.Location = new System.Drawing.Point(12, 83);
-            this.groupBoxResult.Name = "groupBoxResult";
-            this.groupBoxResult.Size = new System.Drawing.Size(305, 100);
-            this.groupBoxResult.TabIndex = 14;
-            this.groupBoxResult.TabStop = false;
-            this.groupBoxResult.Text = "Result";
-            // 
             // groupBoxParameters
             // 
+            this.groupBoxParameters.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(52)))), ((int)(((byte)(64)))));
             this.groupBoxParameters.Controls.Add(this.label2);
             this.groupBoxParameters.Controls.Add(this.textBoxPopulationSize);
             this.groupBoxParameters.Controls.Add(this.textBoxMaxGenerations);
@@ -168,30 +163,46 @@ namespace GenericEquationSolver
             this.groupBoxParameters.Controls.Add(this.label4);
             this.groupBoxParameters.Controls.Add(this.textBoxMotivationRate);
             this.groupBoxParameters.Controls.Add(this.label3);
+            this.groupBoxParameters.ForeColor = System.Drawing.SystemColors.InactiveCaption;
             this.groupBoxParameters.Location = new System.Drawing.Point(323, 12);
             this.groupBoxParameters.Name = "groupBoxParameters";
-            this.groupBoxParameters.Size = new System.Drawing.Size(231, 171);
+            this.groupBoxParameters.Size = new System.Drawing.Size(249, 171);
             this.groupBoxParameters.TabIndex = 15;
             this.groupBoxParameters.TabStop = false;
             this.groupBoxParameters.Text = "Parameters";
             // 
-            // Form1
+            // groupBoxResult
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(568, 239);
+            this.groupBoxResult.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(52)))), ((int)(((byte)(64)))));
+            this.groupBoxResult.Controls.Add(this.textBoxResult);
+            this.groupBoxResult.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.groupBoxResult.Location = new System.Drawing.Point(12, 83);
+            this.groupBoxResult.Name = "groupBoxResult";
+            this.groupBoxResult.Size = new System.Drawing.Size(305, 100);
+            this.groupBoxResult.TabIndex = 14;
+            this.groupBoxResult.TabStop = false;
+            this.groupBoxResult.Text = "Result";
+            // 
+            // GenericEquationSolver
+            // 
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(41)))), ((int)(((byte)(54)))));
+            this.ClientSize = new System.Drawing.Size(584, 239);
             this.Controls.Add(this.groupBoxParameters);
             this.Controls.Add(this.groupBoxResult);
             this.Controls.Add(this.groupBoxEquation);
             this.Controls.Add(this.buttonSolve);
-            this.Name = "Form1";
+            this.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.Name = "GenericEquationSolver";
             this.Text = "Generic Equation Solver";
             this.groupBoxEquation.ResumeLayout(false);
             this.groupBoxEquation.PerformLayout();
-            this.groupBoxResult.ResumeLayout(false);
-            this.groupBoxResult.PerformLayout();
             this.groupBoxParameters.ResumeLayout(false);
             this.groupBoxParameters.PerformLayout();
+            this.groupBoxResult.ResumeLayout(false);
+            this.groupBoxResult.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -211,8 +222,8 @@ namespace GenericEquationSolver
         private System.Windows.Forms.TextBox textBoxResult;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.GroupBox groupBoxEquation;
-        private System.Windows.Forms.GroupBox groupBoxResult;
         private System.Windows.Forms.GroupBox groupBoxParameters;
+        private System.Windows.Forms.GroupBox groupBoxResult;
     }
 }
 
