@@ -17,3 +17,22 @@ C:\Users\salty\Desktop\equation-solver\GenericEquationSolver\GenericEquationSolv
 C:\Users\salty\Desktop\equation-solver\GenericEquationSolver\GenericEquationSolver\obj\Debug\net5.0-windows\ref\GenericEquationSolver.dll
 C:\Users\salty\Desktop\equation-solver\GenericEquationSolver\GenericEquationSolver\obj\Debug\net5.0-windows\GenericEquationSolver.pdb
 C:\Users\salty\Desktop\equation-solver\GenericEquationSolver\GenericEquationSolver\obj\Debug\net5.0-windows\GenericEquationSolver.genruntimeconfig.cache
+D:\An 4\IA\proiect\equation-solver\GenericEquationSolver\GenericEquationSolver\bin\Debug\net5.0-windows\GenericEquationSolver.exe
+D:\An 4\IA\proiect\equation-solver\GenericEquationSolver\GenericEquationSolver\bin\Debug\net5.0-windows\GenericEquationSolver.deps.json
+D:\An 4\IA\proiect\equation-solver\GenericEquationSolver\GenericEquationSolver\bin\Debug\net5.0-windows\GenericEquationSolver.runtimeconfig.json
+D:\An 4\IA\proiect\equation-solver\GenericEquationSolver\GenericEquationSolver\bin\Debug\net5.0-windows\GenericEquationSolver.runtimeconfig.dev.json
+D:\An 4\IA\proiect\equation-solver\GenericEquationSolver\GenericEquationSolver\bin\Debug\net5.0-windows\GenericEquationSolver.dll
+D:\An 4\IA\proiect\equation-solver\GenericEquationSolver\GenericEquationSolver\bin\Debug\net5.0-windows\ref\GenericEquationSolver.dll
+D:\An 4\IA\proiect\equation-solver\GenericEquationSolver\GenericEquationSolver\bin\Debug\net5.0-windows\GenericEquationSolver.pdb
+D:\An 4\IA\proiect\equation-solver\GenericEquationSolver\GenericEquationSolver\bin\Debug\net5.0-windows\MathParser.org-mXparser.dll
+D:\An 4\IA\proiect\equation-solver\GenericEquationSolver\GenericEquationSolver\obj\Debug\net5.0-windows\GenericEquationSolver.csproj.AssemblyReference.cache
+D:\An 4\IA\proiect\equation-solver\GenericEquationSolver\GenericEquationSolver\obj\Debug\net5.0-windows\GenericEquationSolver.Form1.resources
+D:\An 4\IA\proiect\equation-solver\GenericEquationSolver\GenericEquationSolver\obj\Debug\net5.0-windows\GenericEquationSolver.csproj.GenerateResource.cache
+D:\An 4\IA\proiect\equation-solver\GenericEquationSolver\GenericEquationSolver\obj\Debug\net5.0-windows\GenericEquationSolver.GeneratedMSBuildEditorConfig.editorconfig
+D:\An 4\IA\proiect\equation-solver\GenericEquationSolver\GenericEquationSolver\obj\Debug\net5.0-windows\GenericEquationSolver.AssemblyInfoInputs.cache
+D:\An 4\IA\proiect\equation-solver\GenericEquationSolver\GenericEquationSolver\obj\Debug\net5.0-windows\GenericEquationSolver.AssemblyInfo.cs
+D:\An 4\IA\proiect\equation-solver\GenericEquationSolver\GenericEquationSolver\obj\Debug\net5.0-windows\GenericEquationSolver.csproj.CoreCompileInputs.cache
+D:\An 4\IA\proiect\equation-solver\GenericEquationSolver\GenericEquationSolver\obj\Debug\net5.0-windows\GenericEquationSolver.dll
+D:\An 4\IA\proiect\equation-solver\GenericEquationSolver\GenericEquationSolver\obj\Debug\net5.0-windows\ref\GenericEquationSolver.dll
+D:\An 4\IA\proiect\equation-solver\GenericEquationSolver\GenericEquationSolver\obj\Debug\net5.0-windows\GenericEquationSolver.pdb
+D:\An 4\IA\proiect\equation-solver\GenericEquationSolver\GenericEquationSolver\obj\Debug\net5.0-windows\GenericEquationSolver.genruntimeconfig.cache

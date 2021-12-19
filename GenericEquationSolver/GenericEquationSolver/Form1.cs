@@ -18,7 +18,7 @@ namespace GenericEquationSolver
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void buttonSolve_Click(object sender, EventArgs e)
         {
             Function f = new Function("f", "x^2 + sin(pi/4)", "x");
 
