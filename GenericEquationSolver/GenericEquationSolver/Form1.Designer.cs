@@ -64,43 +64,43 @@ namespace GenericEquationSolver
             // 
             this.textBoxEquation.Location = new System.Drawing.Point(6, 22);
             this.textBoxEquation.Name = "textBoxEquation";
-            this.textBoxEquation.Size = new System.Drawing.Size(287, 24);
+            this.textBoxEquation.Size = new System.Drawing.Size(287, 22);
             this.textBoxEquation.TabIndex = 1;
             // 
             // textBoxPopulationSize
             // 
-            this.textBoxPopulationSize.Location = new System.Drawing.Point(147, 15);
+            this.textBoxPopulationSize.Location = new System.Drawing.Point(147, 22);
             this.textBoxPopulationSize.Name = "textBoxPopulationSize";
-            this.textBoxPopulationSize.Size = new System.Drawing.Size(96, 24);
+            this.textBoxPopulationSize.Size = new System.Drawing.Size(96, 22);
             this.textBoxPopulationSize.TabIndex = 2;
             // 
             // textBoxMaxGenerations
             // 
-            this.textBoxMaxGenerations.Location = new System.Drawing.Point(147, 51);
+            this.textBoxMaxGenerations.Location = new System.Drawing.Point(147, 55);
             this.textBoxMaxGenerations.Name = "textBoxMaxGenerations";
-            this.textBoxMaxGenerations.Size = new System.Drawing.Size(96, 24);
+            this.textBoxMaxGenerations.Size = new System.Drawing.Size(96, 22);
             this.textBoxMaxGenerations.TabIndex = 3;
             // 
             // textBoxCrossoverRate
             // 
             this.textBoxCrossoverRate.Location = new System.Drawing.Point(147, 92);
             this.textBoxCrossoverRate.Name = "textBoxCrossoverRate";
-            this.textBoxCrossoverRate.Size = new System.Drawing.Size(96, 24);
+            this.textBoxCrossoverRate.Size = new System.Drawing.Size(96, 22);
             this.textBoxCrossoverRate.TabIndex = 4;
             // 
             // textBoxMotivationRate
             // 
-            this.textBoxMotivationRate.Location = new System.Drawing.Point(147, 134);
+            this.textBoxMotivationRate.Location = new System.Drawing.Point(147, 129);
             this.textBoxMotivationRate.Name = "textBoxMotivationRate";
-            this.textBoxMotivationRate.Size = new System.Drawing.Size(96, 24);
+            this.textBoxMotivationRate.Size = new System.Drawing.Size(96, 22);
             this.textBoxMotivationRate.TabIndex = 5;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 22);
+            this.label2.Location = new System.Drawing.Point(6, 25);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(121, 17);
+            this.label2.Size = new System.Drawing.Size(135, 16);
             this.label2.TabIndex = 7;
             this.label2.Text = "Population Size:";
             // 
@@ -109,25 +109,25 @@ namespace GenericEquationSolver
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(6, 58);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(132, 17);
+            this.label3.Size = new System.Drawing.Size(135, 16);
             this.label3.TabIndex = 8;
             this.label3.Text = "Max Generations:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 99);
+            this.label4.Location = new System.Drawing.Point(6, 95);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(123, 17);
+            this.label4.Size = new System.Drawing.Size(127, 16);
             this.label4.TabIndex = 9;
             this.label4.Text = "Crossover Rate:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 141);
+            this.label5.Location = new System.Drawing.Point(6, 132);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(123, 17);
+            this.label5.Size = new System.Drawing.Size(135, 16);
             this.label5.TabIndex = 10;
             this.label5.Text = "Motivation Rate:";
             // 
@@ -192,7 +192,7 @@ namespace GenericEquationSolver
             this.Controls.Add(this.groupBoxResult);
             this.Controls.Add(this.groupBoxEquation);
             this.Controls.Add(this.buttonSolve);
-            this.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ForeColor = System.Drawing.SystemColors.InactiveCaption;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "GenericEquationSolver";
