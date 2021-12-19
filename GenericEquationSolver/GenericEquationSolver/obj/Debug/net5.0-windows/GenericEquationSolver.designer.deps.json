@@ -5,7 +5,24 @@
   },
   "compilationOptions": {},
   "targets": {
-    ".NETCoreApp,Version=v5.0": {}
+    ".NETCoreApp,Version=v5.0": {
+      "MathParser.org-mXparser/4.4.2": {
+        "runtime": {
+          "lib/netcoreapp31/MathParser.org-mXparser.dll": {
+            "assemblyVersion": "4.4.2.0",
+            "fileVersion": "4.4.2.0"
+          }
+        }
+      }
+    }
   },
-  "libraries": {}
+  "libraries": {
+    "MathParser.org-mXparser/4.4.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-V72hYZPG3VEt9NgjQ2gXxL55JWNlgi8TDLOgtoNu8raYVb+IRqgQTKssvDyGK5vzyvTi9WglmmbkEODhgeI4+w==",
+      "path": "mathparser.org-mxparser/4.4.2",
+      "hashPath": "mathparser.org-mxparser.4.4.2.nupkg.sha512"
+    }
+  }
 }

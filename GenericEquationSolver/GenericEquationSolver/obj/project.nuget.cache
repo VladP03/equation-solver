@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "ILsAGGOACl/6JKOh3bzCvTdsQ/4t4i4OQ9X5TSVOcUsvQUf+fu9A9kYHkztPBCk/aN62j9b6nxgBny2aYFQd5Q==",
+  "dgSpecHash": "lOtd7SISOfP22TdxCzyxIZ7Ga1FfEwLQRl2lFfEzmz7fY8sDIeuJqGr3VsWnMvPX872pqTeDkuLUd9GDIScZ7Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\salty\\Desktop\\equation-solver\\GenericEquationSolver\\GenericEquationSolver\\GenericEquationSolver.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\salty\\.nuget\\packages\\mathparser.org-mxparser\\4.4.2\\mathparser.org-mxparser.4.4.2.nupkg.sha512"
+  ],
   "logs": []
 }

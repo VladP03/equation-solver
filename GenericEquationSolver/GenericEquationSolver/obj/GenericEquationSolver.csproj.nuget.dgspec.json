@@ -39,6 +39,12 @@
       "frameworks": {
         "net5.0-windows7.0": {
           "targetAlias": "net5.0-windows",
+          "dependencies": {
+            "MathParser.org-mXparser": {
+              "target": "Package",
+              "version": "[4.4.2, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using org.mariuszgromada.math.mxparser;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,5 +18,11 @@ namespace GenericEquationSolver
             InitializeComponent();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Function f = new Function("f", "x^2 + sin(pi/4)", "x");
+
+            MessageBox.Show(f.calculate(3).ToString());
+        }
     }
 }

@@ -5,13 +5,14 @@ C:\Users\salty\Desktop\equation-solver\GenericEquationSolver\GenericEquationSolv
 C:\Users\salty\Desktop\equation-solver\GenericEquationSolver\GenericEquationSolver\bin\Debug\net5.0-windows\GenericEquationSolver.dll
 C:\Users\salty\Desktop\equation-solver\GenericEquationSolver\GenericEquationSolver\bin\Debug\net5.0-windows\ref\GenericEquationSolver.dll
 C:\Users\salty\Desktop\equation-solver\GenericEquationSolver\GenericEquationSolver\bin\Debug\net5.0-windows\GenericEquationSolver.pdb
-C:\Users\salty\Desktop\equation-solver\GenericEquationSolver\GenericEquationSolver\obj\Debug\net5.0-windows\GenericEquationSolver.csproj.AssemblyReference.cache
+C:\Users\salty\Desktop\equation-solver\GenericEquationSolver\GenericEquationSolver\bin\Debug\net5.0-windows\MathParser.org-mXparser.dll
 C:\Users\salty\Desktop\equation-solver\GenericEquationSolver\GenericEquationSolver\obj\Debug\net5.0-windows\GenericEquationSolver.Form1.resources
 C:\Users\salty\Desktop\equation-solver\GenericEquationSolver\GenericEquationSolver\obj\Debug\net5.0-windows\GenericEquationSolver.csproj.GenerateResource.cache
 C:\Users\salty\Desktop\equation-solver\GenericEquationSolver\GenericEquationSolver\obj\Debug\net5.0-windows\GenericEquationSolver.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\salty\Desktop\equation-solver\GenericEquationSolver\GenericEquationSolver\obj\Debug\net5.0-windows\GenericEquationSolver.AssemblyInfoInputs.cache
 C:\Users\salty\Desktop\equation-solver\GenericEquationSolver\GenericEquationSolver\obj\Debug\net5.0-windows\GenericEquationSolver.AssemblyInfo.cs
 C:\Users\salty\Desktop\equation-solver\GenericEquationSolver\GenericEquationSolver\obj\Debug\net5.0-windows\GenericEquationSolver.csproj.CoreCompileInputs.cache
+C:\Users\salty\Desktop\equation-solver\GenericEquationSolver\GenericEquationSolver\obj\Debug\net5.0-windows\GenericEquationSolver.csproj.CopyComplete
 C:\Users\salty\Desktop\equation-solver\GenericEquationSolver\GenericEquationSolver\obj\Debug\net5.0-windows\GenericEquationSolver.dll
 C:\Users\salty\Desktop\equation-solver\GenericEquationSolver\GenericEquationSolver\obj\Debug\net5.0-windows\ref\GenericEquationSolver.dll
 C:\Users\salty\Desktop\equation-solver\GenericEquationSolver\GenericEquationSolver\obj\Debug\net5.0-windows\GenericEquationSolver.pdb
