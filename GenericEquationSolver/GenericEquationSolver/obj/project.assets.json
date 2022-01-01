@@ -81,19 +81,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\mihae\\.nuget\\packages\\": {}
+    "C:\\Users\\salty\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\An 4\\IA\\proiect\\equation-solver\\GenericEquationSolver\\GenericEquationSolver\\GenericEquationSolver.csproj",
+      "projectUniqueName": "C:\\Users\\salty\\Desktop\\equation-solver\\GenericEquationSolver\\GenericEquationSolver\\GenericEquationSolver.csproj",
       "projectName": "GenericEquationSolver",
-      "projectPath": "D:\\An 4\\IA\\proiect\\equation-solver\\GenericEquationSolver\\GenericEquationSolver\\GenericEquationSolver.csproj",
-      "packagesPath": "C:\\Users\\mihae\\.nuget\\packages\\",
-      "outputPath": "D:\\An 4\\IA\\proiect\\equation-solver\\GenericEquationSolver\\GenericEquationSolver\\obj\\",
+      "projectPath": "C:\\Users\\salty\\Desktop\\equation-solver\\GenericEquationSolver\\GenericEquationSolver\\GenericEquationSolver.csproj",
+      "packagesPath": "C:\\Users\\salty\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\salty\\Desktop\\equation-solver\\GenericEquationSolver\\GenericEquationSolver\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\mihae\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\salty\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

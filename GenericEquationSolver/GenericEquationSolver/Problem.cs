@@ -1,4 +1,5 @@
-﻿using System;
+﻿using org.mariuszgromada.math.mxparser;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,20 +9,21 @@ namespace GenericEquationSolver
 {
     class Problem : IOptimizationProblem
     {
-        Func<double> equationFunction;
-        public Problem(string equationString)
+        Function _equationFunction;
+        public Problem(Function targetFunction)
         {
-            // trebuie sa gandim o metoda de a parsa o functie de grad n dintr-un string
+            _equationFunction = targetFunction;
         }
 
         public void ComputeFitness(Chromosome c)
         {
-            throw new NotImplementedException();
+            c.Fitness = -Math.Abs(_equationFunction.calculate(c.Genes[0]));
         }
 
         public Chromosome MakeChromosome()
         {
-            throw new NotImplementedException();
+            // to be replaced with user input
+            return new Chromosome(1, new double[] { -5 }, new double[] { 5 });
         }
     }
 }

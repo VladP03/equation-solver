@@ -12,12 +12,19 @@ namespace GenericEquationSolver
 
         public static Chromosome Tournament(Chromosome[] population)
         {
-            throw new Exception("Aceasta metoda trebuie implementata");
+            int index1 = _rand.Next(0, population.Length);
+            int index2 = _rand.Next(0, population.Length);
+
+            while (index2 == index1)
+                index2 = _rand.Next(0, population.Length);
+
+            return population[index1].Fitness > population[index2].Fitness ?
+                new Chromosome(population[index1]) : new Chromosome(population[index2]);
         }
 
         public static Chromosome GetBest(Chromosome[] population)
         {
-            throw new Exception("Aceasta metoda trebuie implementata");
+            return new Chromosome(population.OrderByDescending(chromosome => chromosome.Fitness).First());
         }
     }
 

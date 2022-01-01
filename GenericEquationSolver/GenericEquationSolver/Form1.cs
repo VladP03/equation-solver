@@ -23,7 +23,12 @@ namespace GenericEquationSolver
             /*Function f = new Function("f", "x^2 + sin(pi/4)", "x");
 
             MessageBox.Show(f.calculate(3).ToString());*/
-            Function f = new Function("f", textBoxEquation.Text.ToString(), "x");
+            /* dummy tests */
+            var f = new Function("f", textBoxEquation.Text.ToString(), "x");
+            var p = new Problem(f);
+            var c = p.MakeChromosome();
+            p.ComputeFitness(c);
+            MessageBox.Show(c.Fitness.ToString());
 
             textBoxResult.Text = f.calculate(3).ToString();
         }
