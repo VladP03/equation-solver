@@ -52,7 +52,7 @@ namespace GenericEquationSolver
             // buttonSolve
             // 
             this.buttonSolve.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(41)))), ((int)(((byte)(54)))));
-            this.buttonSolve.Location = new System.Drawing.Point(248, 202);
+            this.buttonSolve.Location = new System.Drawing.Point(234, 204);
             this.buttonSolve.Name = "buttonSolve";
             this.buttonSolve.Size = new System.Drawing.Size(132, 23);
             this.buttonSolve.TabIndex = 0;
@@ -66,6 +66,7 @@ namespace GenericEquationSolver
             this.textBoxEquation.Name = "textBoxEquation";
             this.textBoxEquation.Size = new System.Drawing.Size(287, 22);
             this.textBoxEquation.TabIndex = 1;
+            this.textBoxEquation.Text = "x^2 - 4";
             // 
             // textBoxPopulationSize
             // 
@@ -73,6 +74,7 @@ namespace GenericEquationSolver
             this.textBoxPopulationSize.Name = "textBoxPopulationSize";
             this.textBoxPopulationSize.Size = new System.Drawing.Size(96, 22);
             this.textBoxPopulationSize.TabIndex = 2;
+            this.textBoxPopulationSize.Text = "100";
             // 
             // textBoxMaxGenerations
             // 
@@ -80,6 +82,7 @@ namespace GenericEquationSolver
             this.textBoxMaxGenerations.Name = "textBoxMaxGenerations";
             this.textBoxMaxGenerations.Size = new System.Drawing.Size(96, 22);
             this.textBoxMaxGenerations.TabIndex = 3;
+            this.textBoxMaxGenerations.Text = "100";
             // 
             // textBoxCrossoverRate
             // 
@@ -87,6 +90,7 @@ namespace GenericEquationSolver
             this.textBoxCrossoverRate.Name = "textBoxCrossoverRate";
             this.textBoxCrossoverRate.Size = new System.Drawing.Size(96, 22);
             this.textBoxCrossoverRate.TabIndex = 4;
+            this.textBoxCrossoverRate.Text = "0.9";
             // 
             // textBoxMotivationRate
             // 
@@ -94,6 +98,7 @@ namespace GenericEquationSolver
             this.textBoxMotivationRate.Name = "textBoxMotivationRate";
             this.textBoxMotivationRate.Size = new System.Drawing.Size(96, 22);
             this.textBoxMotivationRate.TabIndex = 5;
+            this.textBoxMotivationRate.Text = "0.8";
             // 
             // label2
             // 

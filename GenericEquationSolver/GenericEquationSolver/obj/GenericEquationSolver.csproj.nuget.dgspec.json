@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\salty\\Desktop\\equation-solver\\GenericEquationSolver\\GenericEquationSolver\\GenericEquationSolver.csproj": {}
+    "D:\\programe\\repository\\equation-solver\\GenericEquationSolver\\GenericEquationSolver\\GenericEquationSolver.csproj": {}
   },
   "projects": {
-    "C:\\Users\\salty\\Desktop\\equation-solver\\GenericEquationSolver\\GenericEquationSolver\\GenericEquationSolver.csproj": {
+    "D:\\programe\\repository\\equation-solver\\GenericEquationSolver\\GenericEquationSolver\\GenericEquationSolver.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\salty\\Desktop\\equation-solver\\GenericEquationSolver\\GenericEquationSolver\\GenericEquationSolver.csproj",
+        "projectUniqueName": "D:\\programe\\repository\\equation-solver\\GenericEquationSolver\\GenericEquationSolver\\GenericEquationSolver.csproj",
         "projectName": "GenericEquationSolver",
-        "projectPath": "C:\\Users\\salty\\Desktop\\equation-solver\\GenericEquationSolver\\GenericEquationSolver\\GenericEquationSolver.csproj",
-        "packagesPath": "C:\\Users\\salty\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\salty\\Desktop\\equation-solver\\GenericEquationSolver\\GenericEquationSolver\\obj\\",
+        "projectPath": "D:\\programe\\repository\\equation-solver\\GenericEquationSolver\\GenericEquationSolver\\GenericEquationSolver.csproj",
+        "packagesPath": "C:\\Users\\vlad\\.nuget\\packages\\",
+        "outputPath": "D:\\programe\\repository\\equation-solver\\GenericEquationSolver\\GenericEquationSolver\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\salty\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\vlad\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
