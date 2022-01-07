@@ -1,7 +1,10 @@
 ﻿using org.mariuszgromada.math.mxparser;
 using System;
-using System.Globalization;
 using System.Windows.Forms;
+
+using CustomExceptions;
+using ParseVariable;
+using CheckVariables;
 
 namespace GenericEquationSolver
 {
@@ -29,12 +32,6 @@ namespace GenericEquationSolver
                 getVariablesFromTextBoxes();
                 checkVariablesBeforeSolvingEquation();
                 textBoxResult.Text = solveEquation(problem).ToString();
-            } catch (FormatException exception)
-            {
-                MessageBox.Show("Number format incorrect!");
-            } catch (OverflowException exception)
-            {
-                MessageBox.Show("Number too big!");
             } catch (Exception exception)
             {
                 MessageBox.Show(exception.Message);
@@ -43,28 +40,45 @@ namespace GenericEquationSolver
 
         private void getVariablesFromTextBoxes()
         {
-            populationSize = Int32.Parse(textBoxPopulationSize.Text);
-            numberOfGenerations = Int32.Parse(textBoxMaxGenerations.Text);
-            crossOverRate = Double.Parse(textBoxCrossoverRate.Text, CultureInfo.InvariantCulture);
-            motivationRate = Double.Parse(textBoxMotivationRate.Text, CultureInfo.InvariantCulture);
+            try
+            {
+                populationSize = ParseVariableUtil.parseIntoIntegerFromTextbox(textBoxPopulationSize.Text);
+            } catch (Exception exception)
+            {
+                throw new Exception(exception.Message + "\r\nOn Population Size field");
+            }
+
+            try
+            {
+                numberOfGenerations = ParseVariableUtil.parseIntoIntegerFromTextbox(textBoxMaxGenerations.Text);
+            } catch (Exception exception)
+            {
+                throw new Exception(exception.Message + "\r\nOn Max Generations field");
+            }
+
+            try
+            {
+                crossOverRate = ParseVariableUtil.parseIntoDoubleFromTextbox(textBoxCrossoverRate.Text);
+            } catch (Exception exception)
+            {
+                throw new Exception(exception.Message + "\r\nOn CrossOver Rate field");
+            }
+
+            try
+            {
+                motivationRate = ParseVariableUtil.parseIntoDoubleFromTextbox(textBoxMotivationRate.Text);
+            } catch (Exception exception)
+            {
+                throw new Exception(exception.Message + "\r\nOn Motivation Rate field");
+            }
         }
 
         private void checkVariablesBeforeSolvingEquation()
         {
-            if (populationSize < 0 || numberOfGenerations < 0 || crossOverRate < 0 || motivationRate < 0)
-            {
-                throw new Exception("Some of variables are negative");
-            }
-
-            if (crossOverRate > 1)
-            {
-                throw new Exception("CrossOver Rate should be between 0 and 1");
-            }
-
-            if (motivationRate > 2)
-            {
-                throw new Exception("Motivation Rate should be between 0 and 2");
-            }
+            CheckVariableUtil.checkPopulationSize(populationSize);
+            CheckVariableUtil.checkNumberOfGenerations(numberOfGenerations);
+            CheckVariableUtil.checkCrossOverRate(crossOverRate);
+            CheckVariableUtil.checkMotivationRate(motivationRate);
         }
 
         private double solveEquation(Problem problem)
