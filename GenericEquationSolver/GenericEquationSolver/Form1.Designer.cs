@@ -44,15 +44,25 @@ namespace GenericEquationSolver
             this.groupBoxEquation = new System.Windows.Forms.GroupBox();
             this.groupBoxParameters = new System.Windows.Forms.GroupBox();
             this.groupBoxResult = new System.Windows.Forms.GroupBox();
+            this.groupBoxLimits = new System.Windows.Forms.GroupBox();
+            this.minGeneValueLabel = new System.Windows.Forms.Label();
+            this.maxGeneValueLabel = new System.Windows.Forms.Label();
+            this.textBoxMaxGeneValue = new System.Windows.Forms.TextBox();
+            this.textBoxMinGeneValue = new System.Windows.Forms.TextBox();
+            this.groupBoxOptions = new System.Windows.Forms.GroupBox();
+            this.textBoxNumOfSolutions = new System.Windows.Forms.TextBox();
+            this.numOfSolutionsLabel = new System.Windows.Forms.Label();
             this.groupBoxEquation.SuspendLayout();
             this.groupBoxParameters.SuspendLayout();
             this.groupBoxResult.SuspendLayout();
+            this.groupBoxLimits.SuspendLayout();
+            this.groupBoxOptions.SuspendLayout();
             this.SuspendLayout();
             // 
             // buttonSolve
             // 
             this.buttonSolve.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(41)))), ((int)(((byte)(54)))));
-            this.buttonSolve.Location = new System.Drawing.Point(234, 204);
+            this.buttonSolve.Location = new System.Drawing.Point(232, 290);
             this.buttonSolve.Name = "buttonSolve";
             this.buttonSolve.Size = new System.Drawing.Size(132, 23);
             this.buttonSolve.TabIndex = 0;
@@ -155,7 +165,7 @@ namespace GenericEquationSolver
             this.groupBoxEquation.Size = new System.Drawing.Size(305, 64);
             this.groupBoxEquation.TabIndex = 13;
             this.groupBoxEquation.TabStop = false;
-            this.groupBoxEquation.Text = "Equation";
+            this.groupBoxEquation.Text = "Equation - f(x) from f(x) = 0";
             // 
             // groupBoxParameters
             // 
@@ -188,18 +198,99 @@ namespace GenericEquationSolver
             this.groupBoxResult.TabStop = false;
             this.groupBoxResult.Text = "Result";
             // 
+            // groupBoxLimits
+            // 
+            this.groupBoxLimits.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(52)))), ((int)(((byte)(64)))));
+            this.groupBoxLimits.Controls.Add(this.minGeneValueLabel);
+            this.groupBoxLimits.Controls.Add(this.maxGeneValueLabel);
+            this.groupBoxLimits.Controls.Add(this.textBoxMaxGeneValue);
+            this.groupBoxLimits.Controls.Add(this.textBoxMinGeneValue);
+            this.groupBoxLimits.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.groupBoxLimits.Location = new System.Drawing.Point(12, 196);
+            this.groupBoxLimits.Name = "groupBoxLimits";
+            this.groupBoxLimits.Size = new System.Drawing.Size(305, 81);
+            this.groupBoxLimits.TabIndex = 15;
+            this.groupBoxLimits.TabStop = false;
+            this.groupBoxLimits.Text = "Limits";
+            // 
+            // minGeneValueLabel
+            // 
+            this.minGeneValueLabel.AutoSize = true;
+            this.minGeneValueLabel.Location = new System.Drawing.Point(6, 24);
+            this.minGeneValueLabel.Name = "minGeneValueLabel";
+            this.minGeneValueLabel.Size = new System.Drawing.Size(127, 16);
+            this.minGeneValueLabel.TabIndex = 14;
+            this.minGeneValueLabel.Text = "Min gene value:";
+            // 
+            // maxGeneValueLabel
+            // 
+            this.maxGeneValueLabel.AutoSize = true;
+            this.maxGeneValueLabel.Location = new System.Drawing.Point(6, 52);
+            this.maxGeneValueLabel.Name = "maxGeneValueLabel";
+            this.maxGeneValueLabel.Size = new System.Drawing.Size(127, 16);
+            this.maxGeneValueLabel.TabIndex = 13;
+            this.maxGeneValueLabel.Text = "Max gene value:";
+            // 
+            // textBoxMaxGeneValue
+            // 
+            this.textBoxMaxGeneValue.Location = new System.Drawing.Point(132, 49);
+            this.textBoxMaxGeneValue.Name = "textBoxMaxGeneValue";
+            this.textBoxMaxGeneValue.Size = new System.Drawing.Size(96, 22);
+            this.textBoxMaxGeneValue.TabIndex = 11;
+            this.textBoxMaxGeneValue.Text = "5";
+            // 
+            // textBoxMinGeneValue
+            // 
+            this.textBoxMinGeneValue.Location = new System.Drawing.Point(132, 21);
+            this.textBoxMinGeneValue.Name = "textBoxMinGeneValue";
+            this.textBoxMinGeneValue.Size = new System.Drawing.Size(96, 22);
+            this.textBoxMinGeneValue.TabIndex = 12;
+            this.textBoxMinGeneValue.Text = "-5";
+            // 
+            // groupBoxOptions
+            // 
+            this.groupBoxOptions.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(52)))), ((int)(((byte)(64)))));
+            this.groupBoxOptions.Controls.Add(this.textBoxNumOfSolutions);
+            this.groupBoxOptions.Controls.Add(this.numOfSolutionsLabel);
+            this.groupBoxOptions.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.groupBoxOptions.Location = new System.Drawing.Point(323, 196);
+            this.groupBoxOptions.Name = "groupBoxOptions";
+            this.groupBoxOptions.Size = new System.Drawing.Size(249, 81);
+            this.groupBoxOptions.TabIndex = 16;
+            this.groupBoxOptions.TabStop = false;
+            this.groupBoxOptions.Text = "Options";
+            // 
+            // textBoxNumOfSolutions
+            // 
+            this.textBoxNumOfSolutions.Location = new System.Drawing.Point(179, 33);
+            this.textBoxNumOfSolutions.Name = "textBoxNumOfSolutions";
+            this.textBoxNumOfSolutions.Size = new System.Drawing.Size(21, 22);
+            this.textBoxNumOfSolutions.TabIndex = 15;
+            this.textBoxNumOfSolutions.Text = "1";
+            // 
+            // numOfSolutionsLabel
+            // 
+            this.numOfSolutionsLabel.AutoSize = true;
+            this.numOfSolutionsLabel.Location = new System.Drawing.Point(6, 36);
+            this.numOfSolutionsLabel.Name = "numOfSolutionsLabel";
+            this.numOfSolutionsLabel.Size = new System.Drawing.Size(167, 16);
+            this.numOfSolutionsLabel.TabIndex = 16;
+            this.numOfSolutionsLabel.Text = "Number of solutions:";
+            // 
             // GenericEquationSolver
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(41)))), ((int)(((byte)(54)))));
-            this.ClientSize = new System.Drawing.Size(584, 239);
+            this.ClientSize = new System.Drawing.Size(582, 324);
+            this.Controls.Add(this.groupBoxOptions);
+            this.Controls.Add(this.groupBoxLimits);
             this.Controls.Add(this.groupBoxParameters);
             this.Controls.Add(this.groupBoxResult);
             this.Controls.Add(this.groupBoxEquation);
             this.Controls.Add(this.buttonSolve);
             this.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "GenericEquationSolver";
             this.Text = "Generic Equation Solver";
             this.groupBoxEquation.ResumeLayout(false);
@@ -208,6 +299,10 @@ namespace GenericEquationSolver
             this.groupBoxParameters.PerformLayout();
             this.groupBoxResult.ResumeLayout(false);
             this.groupBoxResult.PerformLayout();
+            this.groupBoxLimits.ResumeLayout(false);
+            this.groupBoxLimits.PerformLayout();
+            this.groupBoxOptions.ResumeLayout(false);
+            this.groupBoxOptions.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -229,6 +324,14 @@ namespace GenericEquationSolver
         private System.Windows.Forms.GroupBox groupBoxEquation;
         private System.Windows.Forms.GroupBox groupBoxParameters;
         private System.Windows.Forms.GroupBox groupBoxResult;
+        private System.Windows.Forms.GroupBox groupBoxLimits;
+        private System.Windows.Forms.Label minGeneValueLabel;
+        private System.Windows.Forms.Label maxGeneValueLabel;
+        private System.Windows.Forms.TextBox textBoxMaxGeneValue;
+        private System.Windows.Forms.TextBox textBoxMinGeneValue;
+        private System.Windows.Forms.GroupBox groupBoxOptions;
+        private System.Windows.Forms.TextBox textBoxNumOfSolutions;
+        private System.Windows.Forms.Label numOfSolutionsLabel;
     }
 }
 

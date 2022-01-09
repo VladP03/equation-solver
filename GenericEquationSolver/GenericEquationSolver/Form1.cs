@@ -1,7 +1,6 @@
 ﻿using org.mariuszgromada.math.mxparser;
 using System;
 using System.Windows.Forms;
-
 using CustomExceptions;
 using ParseVariable;
 using CheckVariables;
@@ -16,6 +15,10 @@ namespace GenericEquationSolver
         private int numberOfGenerations;
         private double crossOverRate;
         private double motivationRate;
+        private int numOfGenes;
+        private int minGeneValue;
+        private int maxGeneValue;
+        private bool willLookForComplexSolutions;
 
         public GenericEquationSolver()
         {
@@ -25,13 +28,13 @@ namespace GenericEquationSolver
         private void buttonSolve_Click(object sender, EventArgs e)
         {
             var function = new Function("f", textBoxEquation.Text.ToString(), "x");
-            var problem = new Problem(function);
 
             try
             {
                 getVariablesFromTextBoxes();
+                var problem = new Problem(function, numOfGenes, minGeneValue, maxGeneValue, willLookForComplexSolutions);
                 checkVariablesBeforeSolvingEquation();
-                textBoxResult.Text = solveEquation(problem).ToString();
+                textBoxResult.Text = solveEquation(problem);
             } catch (Exception exception)
             {
                 MessageBox.Show(exception.Message);
@@ -71,6 +74,33 @@ namespace GenericEquationSolver
             {
                 throw new Exception(exception.Message + "\r\nOn Motivation Rate field");
             }
+
+            try
+            {
+                numOfGenes = ParseVariableUtil.parseIntoIntegerFromTextbox(textBoxNumOfSolutions.Text);
+            }
+            catch (Exception exception)
+            {
+                throw new Exception(exception.Message + "\r\nOn Num Of Genes field");
+            }
+
+            try
+            {
+                minGeneValue = ParseVariableUtil.parseIntoIntegerFromTextbox(textBoxMinGeneValue.Text);
+            }
+            catch (Exception exception)
+            {
+                throw new Exception(exception.Message + "\r\nOn Min Gene Value field");
+            }
+
+            try
+            {
+                maxGeneValue = ParseVariableUtil.parseIntoIntegerFromTextbox(textBoxMaxGeneValue.Text);
+            }
+            catch (Exception exception)
+            {
+                throw new Exception(exception.Message + "\r\nOn Max Gene Value field");
+            }
         }
 
         private void checkVariablesBeforeSolvingEquation()
@@ -81,9 +111,15 @@ namespace GenericEquationSolver
             CheckVariableUtil.checkMotivationRate(motivationRate);
         }
 
-        private double solveEquation(Problem problem)
+        private string solveEquation(IOptimizationProblem problem)
         {
-            return differential.Solve(problem, populationSize, numberOfGenerations, crossOverRate, motivationRate).Genes[0];
+            Chromosome bestChromosome = differential.Solve(problem, populationSize, numberOfGenerations, crossOverRate, motivationRate);
+            string solutions = "";
+            foreach(var gene in bestChromosome.Genes)
+            {
+                solutions += $"{gene.ToString()}\r\n";
+            }
+            return solutions;
         }
     }
 }

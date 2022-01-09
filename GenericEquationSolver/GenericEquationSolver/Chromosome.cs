@@ -35,7 +35,7 @@ namespace GenericEquationSolver
 
         private static Random _rand = new Random();
 
-        public Chromosome(int noGenes, double[] minValues, double[] maxValues)
+        public Chromosome(int noGenes, double minValue, double maxValue)
         {
             NoGenes = noGenes;
             Genes = new double[noGenes];
@@ -44,10 +44,10 @@ namespace GenericEquationSolver
 
             for (int i = 0; i < noGenes; i++)
             {
-                MinValues[i] = minValues[i];
-                MaxValues[i] = maxValues[i];
+                MinValues[i] = minValue;
+                MaxValues[i] = maxValue;
 
-                Genes[i] = minValues[i] + _rand.NextDouble() * (maxValues[i] - minValues[i]); // initializare aleatorie a genelor
+                Genes[i] = MinValues[i] + _rand.NextDouble() * (MaxValues[i] - MinValues[i]); // initializare aleatorie a genelor
             }
         }
 

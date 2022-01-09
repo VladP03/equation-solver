@@ -10,20 +10,51 @@ namespace GenericEquationSolver
     class Problem : IOptimizationProblem
     {
         Function _equationFunction;
-        public Problem(Function targetFunction)
+        int _numOfSolutions;
+        int _minGeneVal;
+        int _maxGeneVal;
+        bool _willLookForComplexSolution;
+
+        public Problem(Function targetFunction, int numOfSolutions, int minGeneVal, int maxGeneVal, bool willLookForComplexSolutions)
         {
             _equationFunction = targetFunction;
+            _numOfSolutions = numOfSolutions;
+            _minGeneVal = minGeneVal;
+            _maxGeneVal = maxGeneVal;
+            _willLookForComplexSolution = willLookForComplexSolutions;
         }
 
         public void ComputeFitness(Chromosome c)
         {
-            c.Fitness = -Math.Abs(_equationFunction.calculate(c.Genes[0]));
+            double summed = 0;
+            double sme = 0;
+            double dispersion = 0;
+            double standardDeviation = 0;
+            double meanGeneVal = 0;
+
+            foreach (var gene in c.Genes)
+            {
+                summed += -Math.Abs(_equationFunction.calculate(gene));
+                meanGeneVal += gene;
+            }
+            double meanFitness = summed / c.Genes.Length;
+            meanGeneVal /= c.Genes.Length;
+
+            foreach (var gene in c.Genes)
+            {
+                sme += Math.Pow(gene - meanGeneVal, 2);
+            }
+
+            dispersion = sme / c.Genes.Length;
+            standardDeviation = Math.Sqrt(dispersion);
+
+            c.Fitness = 0.90 * meanFitness + 0.10 * standardDeviation;
         }
 
         public Chromosome MakeChromosome()
         {
             // to be replaced with user input
-            return new Chromosome(1, new double[] { -5 }, new double[] { 5 });
+            return new Chromosome(_numOfSolutions, _minGeneVal , _maxGeneVal );
         }
     }
 }
