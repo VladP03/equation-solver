@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace GenericEquationSolver
 {
-    class Problem : IOptimizationProblem
+    public class Problem : IOptimizationProblem
     {
         Function _equationFunction;
         int _numOfSolutions;

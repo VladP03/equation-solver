@@ -29,7 +29,7 @@ namespace GenericEquationSolver
         public Chromosome Solve(IOptimizationProblem p, int populationSize, int maxGenerations, double crossoverRate, double motivationRate)
         {
             Chromosome bestSolution = null;
-            List<Chromosome> populationList = new();
+            List<Chromosome> populationList = new List<Chromosome>();
 
             // 1. initializare
             for (int i = 0; i < populationSize; i++)
@@ -41,7 +41,7 @@ namespace GenericEquationSolver
             for (int gen = 0; gen < maxGenerations; gen++)
             {
 /*                Chromosome[] newPopulation = new Chromosome[populationSize];*/
-                List<Chromosome> newPopulationList = new();
+                List<Chromosome> newPopulationList = new List<Chromosome>();
 
                 // 2. mutatie
                 foreach(Chromosome chromosome in populationList)
@@ -59,7 +59,7 @@ namespace GenericEquationSolver
                     Chromosome chromosome2 = populationList[b];
                     Chromosome chromosome3 = populationList[c];
 
-                    Chromosome newChild = new(chromosome1);
+                    Chromosome newChild = new Chromosome(chromosome1);
                     int divisionPoint = _rand.Next(0, populationList.Count - 1);
                     for (int i = 0; i < newChild.Genes.Length; i++)
                     {

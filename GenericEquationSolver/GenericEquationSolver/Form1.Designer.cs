@@ -216,16 +216,17 @@ namespace GenericEquationSolver
             // minGeneValueLabel
             // 
             this.minGeneValueLabel.AutoSize = true;
-            this.minGeneValueLabel.Location = new System.Drawing.Point(6, 24);
+            this.minGeneValueLabel.Location = new System.Drawing.Point(15, 24);
             this.minGeneValueLabel.Name = "minGeneValueLabel";
             this.minGeneValueLabel.Size = new System.Drawing.Size(127, 16);
             this.minGeneValueLabel.TabIndex = 14;
             this.minGeneValueLabel.Text = "Min gene value:";
+            this.minGeneValueLabel.Click += new System.EventHandler(this.minGeneValueLabel_Click);
             // 
             // maxGeneValueLabel
             // 
             this.maxGeneValueLabel.AutoSize = true;
-            this.maxGeneValueLabel.Location = new System.Drawing.Point(6, 52);
+            this.maxGeneValueLabel.Location = new System.Drawing.Point(15, 49);
             this.maxGeneValueLabel.Name = "maxGeneValueLabel";
             this.maxGeneValueLabel.Size = new System.Drawing.Size(127, 16);
             this.maxGeneValueLabel.TabIndex = 13;
@@ -233,7 +234,7 @@ namespace GenericEquationSolver
             // 
             // textBoxMaxGeneValue
             // 
-            this.textBoxMaxGeneValue.Location = new System.Drawing.Point(132, 49);
+            this.textBoxMaxGeneValue.Location = new System.Drawing.Point(176, 49);
             this.textBoxMaxGeneValue.Name = "textBoxMaxGeneValue";
             this.textBoxMaxGeneValue.Size = new System.Drawing.Size(96, 22);
             this.textBoxMaxGeneValue.TabIndex = 11;
@@ -241,7 +242,7 @@ namespace GenericEquationSolver
             // 
             // textBoxMinGeneValue
             // 
-            this.textBoxMinGeneValue.Location = new System.Drawing.Point(132, 21);
+            this.textBoxMinGeneValue.Location = new System.Drawing.Point(176, 21);
             this.textBoxMinGeneValue.Name = "textBoxMinGeneValue";
             this.textBoxMinGeneValue.Size = new System.Drawing.Size(96, 22);
             this.textBoxMinGeneValue.TabIndex = 12;

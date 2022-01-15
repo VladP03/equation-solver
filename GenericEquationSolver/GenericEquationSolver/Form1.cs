@@ -121,5 +121,10 @@ namespace GenericEquationSolver
             }
             return solutions;
         }
+
+        private void minGeneValueLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
