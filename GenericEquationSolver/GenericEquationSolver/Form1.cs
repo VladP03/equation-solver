@@ -33,7 +33,6 @@ namespace GenericEquationSolver
             {
                 getVariablesFromTextBoxes();
                 var problem = new Problem(function, numOfGenes, minGeneValue, maxGeneValue, willLookForComplexSolutions);
-                checkVariablesBeforeSolvingEquation();
                 textBoxResult.Text = solveEquation(problem);
             } catch (Exception exception)
             {
@@ -46,6 +45,7 @@ namespace GenericEquationSolver
             try
             {
                 populationSize = ParseVariableUtil.parseIntoIntegerFromTextbox(textBoxPopulationSize.Text);
+                CheckVariableUtil.checkPopulationSize(populationSize);
             } catch (Exception exception)
             {
                 throw new Exception(exception.Message + "\r\nOn Population Size field");
@@ -54,6 +54,7 @@ namespace GenericEquationSolver
             try
             {
                 numberOfGenerations = ParseVariableUtil.parseIntoIntegerFromTextbox(textBoxMaxGenerations.Text);
+                CheckVariableUtil.checkNumberOfGenerations(numberOfGenerations);
             } catch (Exception exception)
             {
                 throw new Exception(exception.Message + "\r\nOn Max Generations field");
@@ -62,6 +63,7 @@ namespace GenericEquationSolver
             try
             {
                 crossOverRate = ParseVariableUtil.parseIntoDoubleFromTextbox(textBoxCrossoverRate.Text);
+                CheckVariableUtil.checkCrossOverRate(crossOverRate);
             } catch (Exception exception)
             {
                 throw new Exception(exception.Message + "\r\nOn CrossOver Rate field");
@@ -70,6 +72,7 @@ namespace GenericEquationSolver
             try
             {
                 motivationRate = ParseVariableUtil.parseIntoDoubleFromTextbox(textBoxMotivationRate.Text);
+                CheckVariableUtil.checkMotivationRate(motivationRate);
             } catch (Exception exception)
             {
                 throw new Exception(exception.Message + "\r\nOn Motivation Rate field");
@@ -78,6 +81,7 @@ namespace GenericEquationSolver
             try
             {
                 numOfGenes = ParseVariableUtil.parseIntoIntegerFromTextbox(textBoxNumOfSolutions.Text);
+                CheckVariableUtil.checkNumOfGenes(numOfGenes);
             }
             catch (Exception exception)
             {
@@ -103,15 +107,6 @@ namespace GenericEquationSolver
             }
         }
 
-        private void checkVariablesBeforeSolvingEquation()
-        {
-            CheckVariableUtil.checkPopulationSize(populationSize);
-            CheckVariableUtil.checkNumberOfGenerations(numberOfGenerations);
-            CheckVariableUtil.checkCrossOverRate(crossOverRate);
-            CheckVariableUtil.checkMotivationRate(motivationRate);
-            CheckVariableUtil.checkNumOfGenes(numOfGenes);
-        }
-
         private string solveEquation(IOptimizationProblem problem)
         {
             Chromosome bestChromosome = differential.Solve(problem, populationSize, numberOfGenerations, crossOverRate, motivationRate);
@@ -121,11 +116,6 @@ namespace GenericEquationSolver
                 solutions += $"{gene.ToString()}\r\n";
             }
             return solutions;
-        }
-
-        private void minGeneValueLabel_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

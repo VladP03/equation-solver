@@ -36,22 +36,6 @@ namespace CheckVariables
             }
         }
 
-        public static void checkMinGeneValue(int minGeneValue)
-        {
-            if (minGeneValue < 0)
-            {
-                throw new NegativeOrZeroNumberException("Minimum gene value must be greater than 0 \r\nIntroduced value: " + minGeneValue);
-            }
-        }
-
-        public static void checkMaxGeneValue(int maxGeneValue)
-        {
-            if (maxGeneValue < 0)
-            {
-                throw new NegativeOrZeroNumberException("Maximum gene value must be greater than 0 \r\nIntroduced value: " + maxGeneValue);
-            }
-        }
-
         public static void checkNumOfGenes(int numOfGenes)
         {
             if (numOfGenes < 1 || numOfGenes > 4)

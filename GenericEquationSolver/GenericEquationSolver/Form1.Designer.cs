@@ -221,7 +221,6 @@ namespace GenericEquationSolver
             this.minGeneValueLabel.Size = new System.Drawing.Size(127, 16);
             this.minGeneValueLabel.TabIndex = 14;
             this.minGeneValueLabel.Text = "Min gene value:";
-            this.minGeneValueLabel.Click += new System.EventHandler(this.minGeneValueLabel_Click);
             // 
             // maxGeneValueLabel
             // 

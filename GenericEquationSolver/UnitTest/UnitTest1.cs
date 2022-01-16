@@ -458,20 +458,6 @@ namespace UnitTest
         }
 
         [Test]
-        public void TestNegativeMinGeneValue()
-        {
-            minGeneValue = -10;
-            Assert.Throws<CustomExceptions.NegativeOrZeroNumberException>(delegate { CheckVariables.CheckVariableUtil.checkMinGeneValue(minGeneValue); });
-        }
-
-        [Test]
-        public void TestNegativeMaxGeneValue()
-        {
-            maxGeneValue = -10;
-            Assert.Throws<CustomExceptions.NegativeOrZeroNumberException>(delegate { CheckVariables.CheckVariableUtil.checkMaxGeneValue(maxGeneValue); });
-        }
-
-        [Test]
         public void TestNegativeNumOfGenes()
         {
             numOfGenes = -1;
