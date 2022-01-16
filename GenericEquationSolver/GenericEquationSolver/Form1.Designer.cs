@@ -272,11 +272,11 @@ namespace GenericEquationSolver
             // numOfSolutionsLabel
             // 
             this.numOfSolutionsLabel.AutoSize = true;
-            this.numOfSolutionsLabel.Location = new System.Drawing.Point(6, 36);
+            this.numOfSolutionsLabel.Location = new System.Drawing.Point(27, 36);
             this.numOfSolutionsLabel.Name = "numOfSolutionsLabel";
-            this.numOfSolutionsLabel.Size = new System.Drawing.Size(167, 16);
+            this.numOfSolutionsLabel.Size = new System.Drawing.Size(135, 16);
             this.numOfSolutionsLabel.TabIndex = 16;
-            this.numOfSolutionsLabel.Text = "Number of solutions:";
+            this.numOfSolutionsLabel.Text = "Number of genes:";
             // 
             // GenericEquationSolver
             // 

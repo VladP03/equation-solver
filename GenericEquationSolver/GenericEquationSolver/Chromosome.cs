@@ -35,6 +35,7 @@ namespace GenericEquationSolver
 
         private static Random _rand = new Random();
 
+        // Complexitatea clasei este O(1), considerand numarul de gene din intervalul [1,4]
         public Chromosome(int noGenes, double minValue, double maxValue)
         {
             NoGenes = noGenes;

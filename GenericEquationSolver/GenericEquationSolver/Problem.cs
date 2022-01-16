@@ -24,12 +24,13 @@ namespace GenericEquationSolver
             _willLookForComplexSolution = willLookForComplexSolutions;
         }
 
+        // Considerand faptul ca nr de gene este constrans intre valorile din intervalul [1,4], complexitatea apartine clasei O(1)
         public void ComputeFitness(Chromosome c)
         {
             double summed = 0;
             double sme = 0;
-            double dispersion = 0;
-            double standardDeviation = 0;
+            double dispersion ;
+            double standardDeviation ;
             double meanGeneVal = 0;
 
             foreach (var gene in c.Genes)

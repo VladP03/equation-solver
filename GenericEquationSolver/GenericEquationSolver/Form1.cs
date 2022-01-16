@@ -109,6 +109,7 @@ namespace GenericEquationSolver
             CheckVariableUtil.checkNumberOfGenerations(numberOfGenerations);
             CheckVariableUtil.checkCrossOverRate(crossOverRate);
             CheckVariableUtil.checkMotivationRate(motivationRate);
+            CheckVariableUtil.checkNumOfGenes(numOfGenes);
         }
 
         private string solveEquation(IOptimizationProblem problem)
@@ -128,3 +129,4 @@ namespace GenericEquationSolver
         }
     }
 }
+;

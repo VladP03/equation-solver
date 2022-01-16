@@ -6,9 +6,9 @@ namespace CheckVariables
     {
         public static  void checkPopulationSize(int populationSize)
         {
-            if (populationSize <= 0)
+            if (populationSize <= 2)
             {
-                throw new NegativeOrZeroNumberException("Population is less than or equal to 0 \r\nMust be a positive number greater than 0 \r\nIntroduced value: " + populationSize);
+                throw new NegativeOrZeroNumberException("Population is less than or equal to 2 \r\nMust be a positive integer greater than 2 \r\nIntroduced value: " + populationSize);
             }
         }
 
@@ -16,7 +16,7 @@ namespace CheckVariables
         {
             if (numberOfGenerations <= 0)
             {
-                throw new NegativeOrZeroNumberException("Number of generations is less than or equal to 0 \r\nMust be a positive number greater than 0 \r\nIntroduced value: " + numberOfGenerations);
+                throw new NegativeOrZeroNumberException("Number of generations is less than or equal to 0 \r\nMust be a positive integer greater than 0 \r\nIntroduced value: " + numberOfGenerations);
             }
         }
 
@@ -54,9 +54,9 @@ namespace CheckVariables
 
         public static void checkNumOfGenes(int numOfGenes)
         {
-            if (numOfGenes < 1 || numOfGenes > 9)
+            if (numOfGenes < 1 || numOfGenes > 4)
             {
-                throw new NegativeOrZeroNumberException("Number of genes must be between 1 and 9 \r\nIntroduced value: " + numOfGenes);
+                throw new NegativeOrZeroNumberException("Number of genes must be between 1 and 4 \r\nIntroduced value: " + numOfGenes);
             }
         }
     }
