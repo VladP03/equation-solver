@@ -26,7 +26,7 @@ namespace UnitTest
             numberOfGenerations = 100;
             crossOverRate = 0.9;
             motivationRate = 0.8;
-            var problem = new Problem(function, numOfGenes, minGeneValue, maxGeneValue, false);
+            var problem = new Problem(function, numOfGenes, minGeneValue, maxGeneValue);
             Chromosome bestChromosome = dea.Solve(problem, populationSize, numberOfGenerations, crossOverRate, motivationRate);
             string solutions = "";
             foreach (var gene in bestChromosome.Genes)
@@ -49,7 +49,7 @@ namespace UnitTest
             numberOfGenerations = 100;
             crossOverRate = 0.9;
             motivationRate = 0.8;
-            var problem = new Problem(function, numOfGenes, minGeneValue, maxGeneValue, false);
+            var problem = new Problem(function, numOfGenes, minGeneValue, maxGeneValue);
             Chromosome bestChromosome = dea.Solve(problem, populationSize, numberOfGenerations, crossOverRate, motivationRate);
             System.Array.Sort(bestChromosome.Genes);
             string solutions = "";
@@ -67,14 +67,14 @@ namespace UnitTest
         public void TestEq_3()
         {
             var function = new org.mariuszgromada.math.mxparser.Function("f", "x^3-125", "x");
-            numOfGenes = 3;
+            numOfGenes = 1;
             minGeneValue = -5;
             maxGeneValue = 5;
             populationSize = 100;
             numberOfGenerations = 100;
             crossOverRate = 0.9;
             motivationRate = 0.8;
-            var problem = new Problem(function, numOfGenes, minGeneValue, maxGeneValue, false);
+            var problem = new Problem(function, numOfGenes, minGeneValue, maxGeneValue);
             Chromosome bestChromosome = dea.Solve(problem, populationSize, numberOfGenerations, crossOverRate, motivationRate);
             System.Array.Sort(bestChromosome.Genes);
             string solutions = "";
@@ -84,24 +84,23 @@ namespace UnitTest
             }
             System.Console.WriteLine("Raspuns corect: 5");
             System.Console.WriteLine(solutions);
-            for (int i = 0; i < numOfGenes; ++i)
-            {
-                Assert.AreEqual(5, bestChromosome.Genes[i], 0.01);
-            }
+
+            Assert.AreEqual(5, bestChromosome.Genes[0], 0.01);
+
         }
 
         [Test]
         public void TestEq_4()
         {
             var function = new org.mariuszgromada.math.mxparser.Function("f", "x^5-3*x^3+15*x-4", "x");
-            numOfGenes = 5;
+            numOfGenes = 1;
             minGeneValue = -5;
             maxGeneValue = 5;
             populationSize = 100;
             numberOfGenerations = 100;
             crossOverRate = 0.9;
             motivationRate = 0.8;
-            var problem = new Problem(function, numOfGenes, minGeneValue, maxGeneValue, false);
+            var problem = new Problem(function, numOfGenes, minGeneValue, maxGeneValue);
             Chromosome bestChromosome = dea.Solve(problem, populationSize, numberOfGenerations, crossOverRate, motivationRate);
             string solutions = "";
             foreach (var gene in bestChromosome.Genes)
@@ -110,24 +109,23 @@ namespace UnitTest
             }
             System.Console.WriteLine("Raspuns corect: 0.27050");
             System.Console.WriteLine(solutions);
-            for (int i = 0; i < numOfGenes; ++i)
-            {
-                Assert.AreEqual(0.2705, bestChromosome.Genes[i], 0.03);
-            }
+
+            Assert.AreEqual(0.2705, bestChromosome.Genes[0], 0.01);
+            
         }
 
         [Test]
         public void TestEq_4_LessGeneration()
         {
             var function = new org.mariuszgromada.math.mxparser.Function("f", "x^5-3*x^3+15*x-4", "x");
-            numOfGenes = 5;
+            numOfGenes = 1;
             minGeneValue = -5;
             maxGeneValue = 5;
             populationSize = 100;
             numberOfGenerations = 50;
             crossOverRate = 0.9;
             motivationRate = 0.8;
-            var problem = new Problem(function, numOfGenes, minGeneValue, maxGeneValue, false);
+            var problem = new Problem(function, numOfGenes, minGeneValue, maxGeneValue);
             Chromosome bestChromosome = dea.Solve(problem, populationSize, numberOfGenerations, crossOverRate, motivationRate);
             string solutions = "";
             foreach (var gene in bestChromosome.Genes)
@@ -136,24 +134,22 @@ namespace UnitTest
             }
             System.Console.WriteLine("Raspuns corect: 0.27050");
             System.Console.WriteLine(solutions);
-            for (int i = 0; i < numOfGenes; ++i)
-            {
-                Assert.AreEqual(0.2705, bestChromosome.Genes[i], 0.35);
-            }
+
+            Assert.AreEqual(0.2705, bestChromosome.Genes[0], 0.01);
         }
 
         [Test]
         public void TestEq_4_SmallerPopulation()
         {
             var function = new org.mariuszgromada.math.mxparser.Function("f", "x^5-3*x^3+15*x-4", "x");
-            numOfGenes = 5;
+            numOfGenes = 1;
             minGeneValue = -5;
             maxGeneValue = 5;
             populationSize = 25;
             numberOfGenerations = 100;
             crossOverRate = 0.9;
             motivationRate = 0.8;
-            var problem = new Problem(function, numOfGenes, minGeneValue, maxGeneValue, false);
+            var problem = new Problem(function, numOfGenes, minGeneValue, maxGeneValue);
             Chromosome bestChromosome = dea.Solve(problem, populationSize, numberOfGenerations, crossOverRate, motivationRate);
             string solutions = "";
             foreach (var gene in bestChromosome.Genes)
@@ -162,24 +158,22 @@ namespace UnitTest
             }
             System.Console.WriteLine("Raspuns corect: 0.27050");
             System.Console.WriteLine(solutions);
-            for (int i = 0; i < numOfGenes; ++i)
-            {
-                Assert.AreEqual(0.2705, bestChromosome.Genes[i], 0.1);
-            }
+
+            Assert.AreEqual(0.2705, bestChromosome.Genes[0], 0.01);
         }
 
         [Test]
         public void TestEq_4_DecreaseCrossOverRate()
         {
             var function = new org.mariuszgromada.math.mxparser.Function("f", "x^5-3*x^3+15*x-4", "x");
-            numOfGenes = 5;
+            numOfGenes = 1;
             minGeneValue = -5;
             maxGeneValue = 5;
             populationSize = 100;
             numberOfGenerations = 100;
             crossOverRate = 0.6;
             motivationRate = 0.8;
-            var problem = new Problem(function, numOfGenes, minGeneValue, maxGeneValue, false);
+            var problem = new Problem(function, numOfGenes, minGeneValue, maxGeneValue);
             Chromosome bestChromosome = dea.Solve(problem, populationSize, numberOfGenerations, crossOverRate, motivationRate);
             string solutions = "";
             foreach (var gene in bestChromosome.Genes)
@@ -188,24 +182,22 @@ namespace UnitTest
             }
             System.Console.WriteLine("Raspuns corect: 0.27050");
             System.Console.WriteLine(solutions);
-            for (int i = 0; i < numOfGenes; ++i)
-            {
-                Assert.AreEqual(0.2705, bestChromosome.Genes[i], 0.1);
-            }
+
+            Assert.AreEqual(0.2705, bestChromosome.Genes[0], 0.01);
         }
 
         [Test]
         public void TestEq_4_DecreaseMotivationRate()
         {
             var function = new org.mariuszgromada.math.mxparser.Function("f", "x^5-3*x^3+15*x-4", "x");
-            numOfGenes = 5;
+            numOfGenes = 1;
             minGeneValue = -5;
             maxGeneValue = 5;
             populationSize = 100;
             numberOfGenerations = 100;
             crossOverRate = 0.9;
             motivationRate = 0.4;
-            var problem = new Problem(function, numOfGenes, minGeneValue, maxGeneValue, false);
+            var problem = new Problem(function, numOfGenes, minGeneValue, maxGeneValue);
             Chromosome bestChromosome = dea.Solve(problem, populationSize, numberOfGenerations, crossOverRate, motivationRate);
             string solutions = "";
             foreach (var gene in bestChromosome.Genes)
@@ -214,24 +206,22 @@ namespace UnitTest
             }
             System.Console.WriteLine("Raspuns corect: 0.27050");
             System.Console.WriteLine(solutions);
-            for (int i = 0; i < numOfGenes; ++i)
-            {
-                Assert.AreEqual(0.2705, bestChromosome.Genes[i], 0.1);
-            }
+
+            Assert.AreEqual(0.2705, bestChromosome.Genes[0], 0.01);
         }
 
         [Test]
         public void TestEq_4_Random1()
         {
             var function = new org.mariuszgromada.math.mxparser.Function("f", "x^5-3*x^3+15*x-4", "x");
-            numOfGenes = 5;
+            numOfGenes = 1;
             minGeneValue = -5;
             maxGeneValue = 5;
             populationSize = 75;
             numberOfGenerations = 150;
             crossOverRate = 0.75;
             motivationRate = 0.7;
-            var problem = new Problem(function, numOfGenes, minGeneValue, maxGeneValue, false);
+            var problem = new Problem(function, numOfGenes, minGeneValue, maxGeneValue);
             Chromosome bestChromosome = dea.Solve(problem, populationSize, numberOfGenerations, crossOverRate, motivationRate);
             string solutions = "";
             foreach (var gene in bestChromosome.Genes)
@@ -240,24 +230,22 @@ namespace UnitTest
             }
             System.Console.WriteLine("Raspuns corect: 0.27050");
             System.Console.WriteLine(solutions);
-            for (int i = 0; i < numOfGenes; ++i)
-            {
-                Assert.AreEqual(0.2705, bestChromosome.Genes[i], 0.1);
-            }
+
+            Assert.AreEqual(0.2705, bestChromosome.Genes[0], 0.01);
         }
 
         [Test]
         public void TestEq_4_Random2()
         {
             var function = new org.mariuszgromada.math.mxparser.Function("f", "x^5-3*x^3+15*x-4", "x");
-            numOfGenes = 5;
+            numOfGenes = 1;
             minGeneValue = -5;
             maxGeneValue = 5;
             populationSize = 50;
             numberOfGenerations = 50;
             crossOverRate = 0.6;
             motivationRate = 0.9;
-            var problem = new Problem(function, numOfGenes, minGeneValue, maxGeneValue, false);
+            var problem = new Problem(function, numOfGenes, minGeneValue, maxGeneValue);
             Chromosome bestChromosome = dea.Solve(problem, populationSize, numberOfGenerations, crossOverRate, motivationRate);
             string solutions = "";
             foreach (var gene in bestChromosome.Genes)
@@ -266,24 +254,22 @@ namespace UnitTest
             }
             System.Console.WriteLine("Raspuns corect: 0.27050");
             System.Console.WriteLine(solutions);
-            for(int i=0;i<numOfGenes;++i)
-            {
-                Assert.AreEqual(0.2705, bestChromosome.Genes[i], 0.4);
-            }
+
+            Assert.AreEqual(0.2705, bestChromosome.Genes[0], 0.01);
         }
 
         [Test]
         public void TestEq_4_Random3()
         {
             var function = new org.mariuszgromada.math.mxparser.Function("f", "x^5-3*x^3+15*x-4", "x");
-            numOfGenes = 5;
+            numOfGenes = 1;
             minGeneValue = -5;
             maxGeneValue = 5;
             populationSize = 250;
             numberOfGenerations = 50;
             crossOverRate = 0.8;
             motivationRate = 0.3;
-            var problem = new Problem(function, numOfGenes, minGeneValue, maxGeneValue, false);
+            var problem = new Problem(function, numOfGenes, minGeneValue, maxGeneValue);
             Chromosome bestChromosome = dea.Solve(problem, populationSize, numberOfGenerations, crossOverRate, motivationRate);
             string solutions = "";
             foreach (var gene in bestChromosome.Genes)
@@ -292,10 +278,8 @@ namespace UnitTest
             }
             System.Console.WriteLine("Raspuns corect: 0.27050");
             System.Console.WriteLine(solutions);
-            for (int i = 0; i < numOfGenes; ++i)
-            {
-                Assert.AreEqual(0.2705, bestChromosome.Genes[i], 0.15);
-            }
+            
+            Assert.AreEqual(0.2705, bestChromosome.Genes[0], 0.01);
         }
 
         [Test]
@@ -309,7 +293,7 @@ namespace UnitTest
             numberOfGenerations = 100;
             crossOverRate = 0.9;
             motivationRate = 0.8;
-            var problem = new Problem(function, numOfGenes, minGeneValue, maxGeneValue, false);
+            var problem = new Problem(function, numOfGenes, minGeneValue, maxGeneValue);
             Chromosome bestChromosome = dea.Solve(problem, populationSize, numberOfGenerations, crossOverRate, motivationRate);
             string solutions = "";
             foreach (var gene in bestChromosome.Genes)
@@ -333,7 +317,7 @@ namespace UnitTest
             numberOfGenerations = 100;
             crossOverRate = 0.9;
             motivationRate = 0.8;
-            var problem = new Problem(function, numOfGenes, minGeneValue, maxGeneValue, false);
+            var problem = new Problem(function, numOfGenes, minGeneValue, maxGeneValue);
             Chromosome bestChromosome = dea.Solve(problem, populationSize, numberOfGenerations, crossOverRate, motivationRate);
             string solutions = "";
             foreach (var gene in bestChromosome.Genes)
@@ -357,7 +341,7 @@ namespace UnitTest
             numberOfGenerations = 100;
             crossOverRate = 0.9;
             motivationRate = 0.8;
-            var problem = new Problem(function, numOfGenes, minGeneValue, maxGeneValue, false);
+            var problem = new Problem(function, numOfGenes, minGeneValue, maxGeneValue);
             Chromosome bestChromosome = dea.Solve(problem, populationSize, numberOfGenerations, crossOverRate, motivationRate);
             string solutions = "";
             foreach (var gene in bestChromosome.Genes)
@@ -380,7 +364,7 @@ namespace UnitTest
             numberOfGenerations = 100;
             crossOverRate = 0.9;
             motivationRate = 0.8;
-            var problem = new Problem(function, numOfGenes, minGeneValue, maxGeneValue, false);
+            var problem = new Problem(function, numOfGenes, minGeneValue, maxGeneValue);
             Chromosome bestChromosome = dea.Solve(problem, populationSize, numberOfGenerations, crossOverRate, motivationRate);
             string solutions = "";
             foreach (var gene in bestChromosome.Genes)
@@ -403,7 +387,7 @@ namespace UnitTest
             numberOfGenerations = 500;
             crossOverRate = 0.9;
             motivationRate = 0.8;
-            var problem = new Problem(function, numOfGenes, minGeneValue, maxGeneValue, false);
+            var problem = new Problem(function, numOfGenes, minGeneValue, maxGeneValue);
             Chromosome bestChromosome = dea.Solve(problem, populationSize, numberOfGenerations, crossOverRate, motivationRate);
             string solutions = "";
             foreach (var gene in bestChromosome.Genes)
@@ -465,9 +449,9 @@ namespace UnitTest
         }
 
         [Test]
-        public void TestOver9NumOfGenes()
+        public void TestOver4NumOfGenes()
         {
-            numOfGenes = 10;
+            numOfGenes = 5;
             Assert.Throws<CustomExceptions.NegativeOrZeroNumberException>(delegate { CheckVariables.CheckVariableUtil.checkNumOfGenes(numOfGenes); });
         }
     }

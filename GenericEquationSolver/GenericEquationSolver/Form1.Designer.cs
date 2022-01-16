@@ -40,7 +40,6 @@ namespace GenericEquationSolver
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.textBoxResult = new System.Windows.Forms.TextBox();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.groupBoxEquation = new System.Windows.Forms.GroupBox();
             this.groupBoxParameters = new System.Windows.Forms.GroupBox();
             this.groupBoxResult = new System.Windows.Forms.GroupBox();
@@ -320,7 +319,6 @@ namespace GenericEquationSolver
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBoxResult;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.GroupBox groupBoxEquation;
         private System.Windows.Forms.GroupBox groupBoxParameters;
         private System.Windows.Forms.GroupBox groupBoxResult;

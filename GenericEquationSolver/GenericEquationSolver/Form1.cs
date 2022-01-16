@@ -18,7 +18,6 @@ namespace GenericEquationSolver
         private int numOfGenes;
         private int minGeneValue;
         private int maxGeneValue;
-        private bool willLookForComplexSolutions;
 
         public GenericEquationSolver()
         {
@@ -32,7 +31,7 @@ namespace GenericEquationSolver
             try
             {
                 getVariablesFromTextBoxes();
-                var problem = new Problem(function, numOfGenes, minGeneValue, maxGeneValue, willLookForComplexSolutions);
+                var problem = new Problem(function, numOfGenes, minGeneValue, maxGeneValue);
                 textBoxResult.Text = solveEquation(problem);
             } catch (Exception exception)
             {

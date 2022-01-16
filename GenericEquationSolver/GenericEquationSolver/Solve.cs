@@ -8,22 +8,10 @@ namespace GenericEquationSolver
 {
     public class Selection
     {
-        private static Random _rand = new Random();
-
         // O(n)
         public static Chromosome GetBest(List<Chromosome> population) 
         {
-            Chromosome bestChromosome= population.First();
-
-            foreach(var chromosome in population)
-            {
-                if (bestChromosome.Fitness < chromosome.Fitness)
-                {
-                    bestChromosome = chromosome;
-                }
-            }
-
-            return bestChromosome;
+            return population.Find(x => x.Fitness == population.Max(x => x.Fitness));
         }
     }
 
