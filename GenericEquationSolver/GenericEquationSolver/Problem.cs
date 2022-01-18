@@ -26,8 +26,7 @@ namespace GenericEquationSolver
         public void ComputeFitness(Chromosome c)
         {
             double summed = 0;
-            double sme = 0;
-            double dispersion ;
+            double dispersion = 0;
             double standardDeviation ;
             double meanGeneVal = 0;
 
@@ -43,10 +42,10 @@ namespace GenericEquationSolver
 
                 foreach (var gene in c.Genes)
                 {
-                    sme += Math.Pow(gene - meanGeneVal, 2);
+                    dispersion += Math.Pow(gene - meanGeneVal, 2);
                 }
 
-                dispersion = sme / c.Genes.Length;
+                dispersion /= c.Genes.Length;
                 standardDeviation = Math.Sqrt(dispersion);
 
                 c.Fitness = 0.90 * meanFitness + 0.10 * standardDeviation;

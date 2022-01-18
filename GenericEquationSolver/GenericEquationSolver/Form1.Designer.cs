@@ -51,6 +51,7 @@ namespace GenericEquationSolver
             this.groupBoxOptions = new System.Windows.Forms.GroupBox();
             this.textBoxNumOfSolutions = new System.Windows.Forms.TextBox();
             this.numOfSolutionsLabel = new System.Windows.Forms.Label();
+            this.buttonStatisticalAnalysis = new System.Windows.Forms.Button();
             this.groupBoxEquation.SuspendLayout();
             this.groupBoxParameters.SuspendLayout();
             this.groupBoxResult.SuspendLayout();
@@ -61,7 +62,7 @@ namespace GenericEquationSolver
             // buttonSolve
             // 
             this.buttonSolve.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(41)))), ((int)(((byte)(54)))));
-            this.buttonSolve.Location = new System.Drawing.Point(232, 290);
+            this.buttonSolve.Location = new System.Drawing.Point(140, 289);
             this.buttonSolve.Name = "buttonSolve";
             this.buttonSolve.Size = new System.Drawing.Size(132, 23);
             this.buttonSolve.TabIndex = 0;
@@ -276,11 +277,23 @@ namespace GenericEquationSolver
             this.numOfSolutionsLabel.TabIndex = 16;
             this.numOfSolutionsLabel.Text = "Number of genes:";
             // 
+            // buttonStatisticalAnalysis
+            // 
+            this.buttonStatisticalAnalysis.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(41)))), ((int)(((byte)(54)))));
+            this.buttonStatisticalAnalysis.Location = new System.Drawing.Point(290, 289);
+            this.buttonStatisticalAnalysis.Name = "buttonStatisticalAnalysis";
+            this.buttonStatisticalAnalysis.Size = new System.Drawing.Size(174, 23);
+            this.buttonStatisticalAnalysis.TabIndex = 17;
+            this.buttonStatisticalAnalysis.Text = "Check correctness";
+            this.buttonStatisticalAnalysis.UseVisualStyleBackColor = true;
+            this.buttonStatisticalAnalysis.Click += new System.EventHandler(this.buttonStatisticalAnalysis_Click);
+            // 
             // GenericEquationSolver
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(41)))), ((int)(((byte)(54)))));
             this.ClientSize = new System.Drawing.Size(582, 324);
+            this.Controls.Add(this.buttonStatisticalAnalysis);
             this.Controls.Add(this.groupBoxOptions);
             this.Controls.Add(this.groupBoxLimits);
             this.Controls.Add(this.groupBoxParameters);
@@ -330,6 +343,7 @@ namespace GenericEquationSolver
         private System.Windows.Forms.GroupBox groupBoxOptions;
         private System.Windows.Forms.TextBox textBoxNumOfSolutions;
         private System.Windows.Forms.Label numOfSolutionsLabel;
+        private System.Windows.Forms.Button buttonStatisticalAnalysis;
     }
 }
 

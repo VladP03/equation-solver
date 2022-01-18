@@ -4,6 +4,7 @@ using System.Windows.Forms;
 using CustomExceptions;
 using ParseVariable;
 using CheckVariables;
+using System.Collections.Generic;
 
 namespace GenericEquationSolver
 {
@@ -115,6 +116,48 @@ namespace GenericEquationSolver
                 solutions += $"{gene.ToString()}\r\n";
             }
             return solutions;
+        }
+
+        private void buttonStatisticalAnalysis_Click(object sender, EventArgs e)
+        {
+            var function = new Function("f", textBoxEquation.Text.ToString(), "x");
+
+            try
+            {
+                getVariablesFromTextBoxes();
+                MessageBox.Show("Please note that correctness is guaranteed only for single solution equations!! Otherwise standard deviation will clearly be different than 0.");
+                var problem = new Problem(function, numOfGenes, minGeneValue, maxGeneValue);
+                List<double> results = new List<double>();
+                double dispersion = 0;
+                double mean = 0;
+                double standardDeviation;
+
+                for (int i = 0; i < 100; ++i)
+                {
+                    results.Add(differential.Solve(problem, populationSize, numberOfGenerations, crossOverRate, motivationRate).Genes[0]);
+                }
+
+                foreach (double solution in results)
+                {
+                    mean += solution;
+                }
+
+                mean /= results.Count;
+
+                foreach (double solution in results)
+                {
+                    dispersion += Math.Pow(solution - mean, 2);
+                }
+
+                dispersion /= results.Count;
+                standardDeviation = Math.Sqrt(dispersion);
+
+                textBoxResult.Text = $"Standard deviation after running 100 times the algorithm for the given equation: {standardDeviation}" ;
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+            }
         }
     }
 }
