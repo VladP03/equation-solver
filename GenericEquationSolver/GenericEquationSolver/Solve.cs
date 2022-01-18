@@ -11,7 +11,8 @@ namespace GenericEquationSolver
         // O(n)
         public static Chromosome GetBest(List<Chromosome> population) 
         {
-            return population.Find(x => x.Fitness == population.Max(x => x.Fitness));
+            double maxFitness = population.Max(x => x.Fitness);
+            return population.Find(x => x.Fitness == maxFitness);
         }
     }
 
@@ -20,7 +21,7 @@ namespace GenericEquationSolver
     /// </summary>
     public class DifferentialEvolutionaryAlgorithm
     {
-        private static Random _rand = new Random();
+        private static readonly Random _rand = new Random();
 
         /// <summary>
         /// Metoda de optimizare care gaseste solutia problemei
@@ -98,11 +99,9 @@ namespace GenericEquationSolver
                 }
 
                 populationList = newPopulationList; // A15 de maxGenerations
-
-                bestSolution = Selection.GetBest(populationList); // O(maxGeneration*populationSize) A16 de maxGenerations
             }
 
-            return bestSolution; // A17
+            return Selection.GetBest(populationList); ; // A17
         }
         // Numarul de instructiuni efectuate : A[2+2*(populationSize)] + A[2*(populationSize+1)] + maxGenerations*(A1 + A15 + A16 + populationSize( A[2-9] + (A10||A11) + A12 + (A13||A14))) + A[(2*(maxGenerations+1)]*A[(2*(populationSize+1)]*[1-4] + A17
         // Caz favorabil are acelasi ordin de complexitate cu cazul mediu si cel nefavorabil
